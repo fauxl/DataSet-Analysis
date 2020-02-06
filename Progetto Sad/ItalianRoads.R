@@ -348,7 +348,8 @@ abline(h=0, col="blue", lty=2)
 
 ## Regressione Polinomiale
 
-pol <- lm(DatasetStrada[,3]~ DatasetStrada[,5]+ I(DatasetStrada[,5]^2))
+pol <- lm(DatasetStrada$Traffico~DatasetStrada$`Cattive condizioni stradali`
+        +  I((DatasetStrada$`Cattive condizioni stradali`)^2))
 pol
   
   
